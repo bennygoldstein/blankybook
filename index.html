@@ -225,6 +225,24 @@
   .panel .t b{display:block;font-family:var(--head);color:var(--night);font-size:.95rem;margin-bottom:3px}
   .peek-cta{text-align:center;margin-top:26px}
 
+  /* ---------- Watch the story ---------- */
+  .watch-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:36px;align-items:center}
+  @media(max-width:900px){.watch-grid{grid-template-columns:1fr}}
+  .yt{position:relative;aspect-ratio:16/9;border-radius:26px;overflow:hidden;background:var(--night) center/cover no-repeat;box-shadow:var(--shadow);cursor:pointer;border:6px solid #fff}
+  .yt img{width:100%;height:100%;object-fit:cover}
+  .yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .yt .play{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(180deg,rgba(20,30,58,.05),rgba(20,30,58,.45))}
+  .yt .play span{width:92px;height:92px;border-radius:50%;background:var(--moon);color:var(--night-deep);display:grid;place-items:center;font-size:2.2rem;padding-left:8px;box-shadow:0 18px 40px -12px rgba(0,0,0,.6);transition:transform .15s}
+  .yt:hover .play span{transform:scale(1.08)}
+  .yt .dur{position:absolute;right:14px;bottom:14px;background:rgba(20,30,58,.8);color:#fff;font-weight:800;font-size:.8rem;padding:5px 10px;border-radius:999px}
+  .watch-copy h2{font-size:clamp(1.8rem,3.4vw,2.4rem)}
+  .watch-copy p{color:var(--slate);font-size:1.05rem}
+  .qr-note{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 16px;margin:18px 0 22px;font-weight:700;font-size:.92rem;color:var(--ink)}
+  .qr-note em{font-style:normal;font-size:1.8rem}
+  .watch-cta{display:flex;flex-wrap:wrap;gap:12px}
+  .watch-link{display:inline-flex;align-items:center;gap:6px;font-weight:800;color:var(--moon-deep);text-decoration:none;font-size:.9rem}
+  .watch-link:hover{text-decoration:underline}
+
   /* ---------- Compare ---------- */
   .compare table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line)}
   .compare th,.compare td{padding:16px 18px;text-align:center;border-bottom:1px solid var(--line);font-size:.95rem}
@@ -331,6 +349,7 @@
       <a class="navlink" href="#how">How it folds</a>
       <a class="navlink" href="#shop">Stories</a>
       <a class="navlink" href="#peek">Peek inside</a>
+      <a class="navlink" href="#watch">Watch</a>
       <a class="navlink" href="#faq">FAQ</a>
       <a class="btn btn-moon sm" href="#shop">Shop Blankets</a>
       <button class="cart-btn" id="cartBtn" aria-label="Open cart">
@@ -368,7 +387,7 @@
           <source src="assets/video-mom-boy.mp4" type="video/mp4">
           <img src="assets/life-mom-boy.jpg" alt="A mother reads the BlankyBook blanket book to her son in bed">
         </video>
-        <div class="bubble"><i>📖</i> Book → Blanket → Movie</div>
+        <a class="bubble" href="#watch" style="text-decoration:none"><i>▶</i> Watch the animated story</a>
       </div>
     </div>
   </div>
@@ -426,7 +445,7 @@
     </div>
     <div class="features">
       <div class="feat"><div class="ic" style="background:var(--sky-soft)">☁️</div><h3>Ultra-Soft Fleece</h3><p>Plush, warm and cozy. The kind of blanket that gets dragged to the couch, the car and grandma's house.</p></div>
-      <div class="feat"><div class="ic" style="background:var(--lav-soft)">📱</div><h3>Scan to Watch</h3><p>A QR code on the cover opens the animated movie of the exact story on the blanket. Read it, then watch it.</p></div>
+      <div class="feat"><div class="ic" style="background:var(--lav-soft)">📱</div><h3>Scan to Watch</h3><p>A QR code on the cover opens the animated movie of the exact story on the blanket. Read it, then watch it.</p><a class="watch-link" href="#watch" style="margin-top:10px">▶ Watch the Moon Dragon story</a></div>
       <div class="feat"><div class="ic" style="background:var(--moon-soft)">📖</div><h3>A Story That Grows</h3><p>14 illustrated panels arranged for the fold. Every unfold reveals a bigger, more magical scene.</p></div>
       <div class="feat"><div class="ic" style="background:var(--mint-soft)">😴</div><h3>Gentle Adventures</h3><p>Brave little heroes, friendly dragons and unicorns, no fighting, and every story ends fast asleep.</p></div>
     </div>
@@ -459,12 +478,39 @@
       <div class="panel"><img src="assets/peek-3-4.jpg" alt="Pages 3 and 4"><div class="t"><b>Pages 3–4</b>But tonight the bell echoed in the dark… and no dragon came. Leo looked out his window at the moon and whispered, "I'll find him."</div></div>
       <div class="panel"><img src="assets/peek-5-6.jpg" alt="Pages 5 and 6"><div class="t"><b>Pages 5–6</b>He pulled on his little cape and tiptoed past the sleepy guards. Beyond the gate, he entered the moonlit forest where fireflies shimmered like stars.</div></div>
     </div>
-    <div class="peek-cta"><a class="btn btn-moon" href="#shop">Read the rest on the blanket →</a></div>
+    <div class="peek-cta"><a class="btn btn-moon" href="#watch">▶ Watch the whole story</a> &nbsp; <a class="btn btn-ghost" href="#shop">Get the blanket</a></div>
+  </div>
+</section>
+
+<!-- ============ WATCH THE STORY ============ -->
+<section class="tint" id="watch" style="--bg:var(--c-lav);--prev:var(--night)">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Scan to watch</div>
+      <h2>Watch the Moon Dragon story come to life</h2>
+      <p>This is the exact story printed on the blanket, animated. It's what the "Scan to Watch" code on the cover opens.</p>
+    </div>
+    <div class="watch-grid">
+      <div class="yt" id="ytFacade" data-id="_Chj8UpFTnU" role="button" tabindex="0" aria-label="Play: The Little Knight and the Moon Dragon, animated bedtime story">
+        <img src="https://i.ytimg.com/vi/_Chj8UpFTnU/maxresdefault.jpg" alt="The Little Knight and the Moon Dragon animated bedtime story" loading="lazy">
+        <div class="play"><span>▶</span></div>
+        <div class="dur">🎬 Animated bedtime story</div>
+      </div>
+      <div class="watch-copy">
+        <h2>Read it. Unfold it. <span class="accent">Watch it.</span></h2>
+        <p>Leo, the Moon Dragon and Moonstone Castle, exactly as they appear on the blanket, now moving. Press play together at bedtime, then let your little one find every scene on the blanket.</p>
+        <div class="qr-note"><em>📱</em><span>Every Moon Dragon BlankyBook has this video behind the "Scan to Watch" code on its cover. No app, no login, just point a phone at it.</span></div>
+        <div class="watch-cta">
+          <a class="btn btn-moon" href="#shop">Get the Moon Dragon BlankyBook</a>
+          <a class="btn btn-outline" href="https://youtu.be/_Chj8UpFTnU" target="_blank" rel="noopener">Open on YouTube</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ============ COMPARE ============ -->
-<section class="compare tint" id="compare" style="--bg:var(--c-mint);--prev:var(--night)">
+<section class="compare tint" id="compare" style="--bg:var(--c-mint);--prev:var(--c-lav)">
   <div class="wrap">
     <div class="section-head">
       <div class="kicker">Us vs. them</div>
@@ -604,6 +650,7 @@ const PRODUCTS = [
     story: "Leo, the youngest knight in Moonstone Castle, follows glowing footprints to find the friendly Moon Dragon and his missing moonstone necklace.",
     img: "assets/blanket-boy.jpg",
     zoom: "assets/blanket-boy-zoom.jpg",
+    video: "https://youtu.be/_Chj8UpFTnU",   // the story's animation (same link as the blanket's QR code)
     soon: false,
     swatches: ["#1e2a5a", "#3b6fb6", "#d9a441", "#c9d6e8"],
     price: { s: 59, l: 79 },
@@ -660,6 +707,7 @@ PRODUCTS.forEach(p => {
     <div class="body">
       <h3>${p.name}</h3>
       <p class="story">${p.story}</p>
+      ${p.video ? `<a class="watch-link" href="#watch">▶ Watch the animated story</a>` : ``}
       <div class="swatches">${p.swatches.map(c => `<i style="background:${c}"></i>`).join("")}</div>${buyBlock}
     </div>`;
   grid.appendChild(el);
@@ -763,6 +811,19 @@ document.querySelectorAll("[data-play]").forEach(b => b.addEventListener("click"
   v.muted = !v.muted; if (v.paused) v.play();
   b.textContent = v.muted ? "▶" : "🔊";
 }));
+
+/* ---------- YouTube facade: loads the real player only when tapped ---------- */
+(function () {
+  const f = $("#ytFacade"); if (!f) return;
+  const play = () => {
+    if (f.querySelector("iframe")) return;
+    const id = f.dataset.id;
+    f.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1" title="The Little Knight and the Moon Dragon — animated bedtime story" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+    f.style.cursor = "default";
+  };
+  f.addEventListener("click", play);
+  f.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); play(); } });
+})();
 
 /* ---------- Waitlist (opens the visitor's email app until a list service is connected) ---------- */
 $("#waitForm").addEventListener("submit", e => {
