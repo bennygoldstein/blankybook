@@ -336,6 +336,13 @@
   /* toast */
   .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--night);color:#fff;padding:12px 20px;border-radius:999px;font-weight:800;opacity:0;transition:all .25s;z-index:130;pointer-events:none;box-shadow:var(--shadow)}
   .toast.on{opacity:1;transform:translate(-50%,0)}
+
+  /* Starlight Unicorn collection preview */
+  .unicorn-gallery{margin-top:38px}
+  .unicorn-gallery .life-card img{height:auto;object-fit:contain;background:var(--cream)}
+  .gallery-image{display:block;width:100%;border:0;padding:0;background:var(--cream);cursor:zoom-in}
+  .gallery-image:focus-visible{outline:3px solid var(--night);outline-offset:-3px}
+  .unicorn-preview-note{text-align:center;color:var(--slate);font-size:.85rem;margin:22px 0 0}
 </style>
 </head>
 <body>
@@ -448,7 +455,7 @@
     </div>
     <div class="features">
       <div class="feat"><div class="ic" style="background:var(--sky-soft)">☁️</div><h3>Ultra-Soft Fleece</h3><p>Plush, warm and cozy. The kind of blanket that gets dragged to the couch, the car and grandma's house.</p></div>
-      <div class="feat"><div class="ic" style="background:var(--lav-soft)">📱</div><h3>Scan to Watch</h3><p>A QR code on the cover opens the animated movie of the exact story on the blanket. Read it, then watch it.</p><a class="watch-link" href="#watch" style="margin-top:10px">▶ Watch the Moon Dragon story</a></div>
+      <div class="feat"><div class="ic" style="background:var(--lav-soft)">📱</div><h3>Scan to Watch</h3><p>A QR code on the cover opens the animated movie of the exact story on the blanket. Read it, then watch it.</p><a class="watch-link" href="#watch" style="margin-top:10px">▶ Watch the animated stories</a></div>
       <div class="feat"><div class="ic" style="background:var(--moon-soft)">📖</div><h3>A Story That Grows</h3><p>14 illustrated panels arranged for the fold. Every unfold reveals a bigger, more magical scene.</p></div>
       <div class="feat"><div class="ic" style="background:var(--mint-soft)">😴</div><h3>Gentle Adventures</h3><p>Brave little heroes, friendly dragons and unicorns, no fighting, and every story ends fast asleep.</p></div>
     </div>
@@ -512,8 +519,52 @@
   </div>
 </section>
 
+<!-- ============ STARLIGHT UNICORN ============ -->
+<section class="tint" id="watch-unicorn" style="--bg:var(--c-rose);--prev:var(--c-lav)">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Coming soon · Princess &amp; Unicorn</div>
+      <h2>Watch the Starlight Unicorn story come to life</h2>
+      <p>Meet Lila and her winged friend in their animated bedtime adventure. Then explore the upcoming pink storybook blanket.</p>
+    </div>
+    <div class="watch-grid">
+      <div class="yt" id="ytUnicornFacade" data-id="wjk5GFJ6a2k" data-title="The Little Princess and the Starlight Unicorn — animated bedtime story" role="button" tabindex="0" aria-label="Play: The Little Princess and the Starlight Unicorn, animated bedtime story">
+        <img src="assets/girl-starlight-video-poster-v1.jpg" alt="Lila riding the winged Starlight Unicorn in the animated bedtime story" loading="lazy" width="1280" height="720">
+        <div class="play"><span aria-hidden="true">▶</span></div>
+        <div class="dur">🎬 Animated bedtime story</div>
+      </div>
+      <div class="watch-copy">
+        <h2>A little princess. <span class="accent">A starlit adventure.</span></h2>
+        <p>Lila follows sparkling hoofprints through Rosepetal Garden to help her winged friend find a missing star necklace. Watch together, then spot the same characters on the blanket.</p>
+        <div class="qr-note"><em aria-hidden="true">📱</em><span>The upcoming Starlight Unicorn BlankyBook pairs its printed adventure with this animated story through the “Scan to Watch” code on the cover.</span></div>
+        <div class="watch-cta">
+          <a class="btn btn-moon" href="#waitlist">Coming Soon</a>
+          <a class="btn btn-outline" href="https://youtu.be/wjk5GFJ6a2k" target="_blank" rel="noopener">Open on YouTube</a>
+        </div>
+      </div>
+    </div>
+    <div class="life-grid unicorn-gallery">
+      <div class="life-card">
+        <button class="gallery-image" type="button" data-zoom="assets/girl-starlight-print-zoom-v1.jpg" aria-label="View the Starlight Unicorn blanket artwork in detail">
+          <img src="assets/blanket-girl-starlight-v1.jpg" alt="The complete pink Starlight Unicorn fleece blanket design, spread flat with all fourteen story pages" loading="lazy" width="1086" height="1448">
+        </button>
+        <div class="t"><h3>Every page on one blanket</h3><p>Rosepetal Castle, sparkling hoofprints and a winged unicorn — the whole bedtime adventure in one soft storybook design.</p></div>
+      </div>
+      <div class="life-card">
+        <img src="assets/girl-folded-starlight-v1.jpg" alt="The pink Starlight Unicorn blanket design folded into a soft fleece storybook" loading="lazy" width="1200" height="1200">
+        <div class="t"><h3>A storybook to unfold</h3><p>The pink-and-gold cover introduces Lila’s story. Each fold opens up more of her enchanted world.</p></div>
+      </div>
+      <div class="life-card">
+        <img src="assets/girl-bedtime-starlight-v1.jpg" alt="A mother and daughter reading the Starlight Unicorn blanket design together at bedtime" loading="lazy" width="1448" height="1086">
+        <div class="t"><h3>Read it. Then snuggle.</h3><p>A little adventure to share, a gentle goodnight to end on, and a cozy blanket to curl up under.</p></div>
+      </div>
+    </div>
+    <p class="unicorn-preview-note">Starlight Unicorn collection preview · Blanket coming soon · <a href="#waitlist">Join the bedtime list</a></p>
+  </div>
+</section>
+
 <!-- ============ COMPARE ============ -->
-<section class="compare tint" id="compare" style="--bg:var(--c-mint);--prev:var(--c-lav)">
+<section class="compare tint" id="compare" style="--bg:var(--c-mint);--prev:var(--c-rose)">
   <div class="wrap">
     <div class="section-head">
       <div class="kicker">Us vs. them</div>
@@ -581,7 +632,7 @@
       <details><summary>How much does shipping cost?</summary><p>Shipping details will be announced when online ordering opens. Join the bedtime list to hear first.</p></details>
       <details><summary>What ages is it for?</summary><p>The stories are written for ages 2 to 8: short enough to read in about five minutes, exciting enough for a big kid, and gentle enough for lights-out. Every hero ends the story fast asleep.</p></details>
       <details><summary>Can I wash it?</summary><p>Yes. Machine wash cold on gentle and tumble dry low. The artwork is printed into the fleece, not on top of it, so it stays soft and bright.</p></details>
-      <details><summary>Which stories are available?</summary><p>Our first BlankyBook is <b>The Little Knight and the Moon Dragon</b>. Coming soon: <b>The Little Princess and the Starlight Unicorn</b> and our Halloween story, <b>The Little Skeleton and the Midnight Lantern</b>. More stories are on the way, and personalized editions with your child's name are in the works.</p></details>
+      <details><summary>Which stories are available?</summary><p>The <b>Moon Dragon</b> and <b>Starlight Unicorn</b> animated stories are ready to watch here. Online ordering for all blankets is <b>coming soon</b>, including <b>The Little Knight and the Moon Dragon</b>, <b>The Little Princess and the Starlight Unicorn</b> and our Halloween story, <b>The Little Skeleton and the Midnight Lantern</b>. Join the bedtime list for launch updates.</p></details>
       <details><summary>When will my BlankyBook ship?</summary><p>BlankyBook is coming soon. Online purchasing is temporarily unavailable; join the bedtime list to be notified when ordering opens.</p></details>
     </div>
   </div>
@@ -666,9 +717,11 @@ const PRODUCTS = [
     id: "girl",
     tag: "🦄 Princess & Unicorn",
     name: "The Little Princess and the Starlight Unicorn",
-    story: "Lila of Rosepetal Castle follows sparkling hoofprints to find the Starlight Unicorn and bring the shimmer back to the night sky.",
-    img: "assets/blanket-girl.jpg",
-    zoom: "assets/blanket-girl.jpg",
+    story: "Lila of Rosepetal Castle follows sparkling hoofprints to find her winged unicorn friend and the missing star necklace, bringing the gentle goodnight glow back to the sky.",
+    img: "assets/blanket-girl-starlight-v1.jpg",
+    zoom: "assets/girl-starlight-print-zoom-v1.jpg",
+    video: "https://youtu.be/wjk5GFJ6a2k",
+    watch: "#watch-unicorn",
     soon: true,            // set to false and add a `buy:` Stripe link when this blanket is ready to sell
     swatches: ["#e59bbf", "#b48ad6", "#fff1d6", "#f2c94c"],
     price: { s: 39.95 },
@@ -714,7 +767,7 @@ PRODUCTS.forEach(p => {
     <div class="body">
       <h3>${p.name}</h3>
       <p class="story">${p.story}</p>
-      ${p.video ? `<a class="watch-link" href="#watch">▶ Watch the animated story</a>` : ``}
+      ${p.video ? `<a class="watch-link" href="${p.watch || "#watch"}">▶ Watch the animated story</a>` : ``}
       <div class="swatches">${p.swatches.map(c => `<i style="background:${c}"></i>`).join("")}</div>${buyBlock}
     </div>`;
   grid.appendChild(el);
@@ -823,17 +876,22 @@ document.querySelectorAll("[data-play]").forEach(b => b.addEventListener("click"
 }));
 
 /* ---------- YouTube facade: loads the real player only when tapped ---------- */
-(function () {
-  const f = $("#ytFacade"); if (!f) return;
+document.querySelectorAll(".yt[data-id]").forEach(f => {
   const play = () => {
     if (f.querySelector("iframe")) return;
-    const id = f.dataset.id;
-    f.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0&modestbranding=1" title="The Little Knight and the Moon Dragon — animated bedtime story" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
+    const frame = document.createElement("iframe");
+    frame.src = `https://www.youtube-nocookie.com/embed/${f.dataset.id}?autoplay=1&rel=0&modestbranding=1`;
+    frame.title = f.dataset.title || "The Little Knight and the Moon Dragon — animated bedtime story";
+    frame.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    frame.allowFullscreen = true;
+    f.replaceChildren(frame);
+    f.removeAttribute("role");
+    f.removeAttribute("tabindex");
     f.style.cursor = "default";
   };
   f.addEventListener("click", play);
   f.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); play(); } });
-})();
+});
 
 /* ---------- Waitlist (opens the visitor's email app until a list service is connected) ---------- */
 $("#waitForm").addEventListener("submit", e => {
